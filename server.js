@@ -1,4 +1,4 @@
-const stripe = require('stripe')('sk_test_51TkqMYBp80o2Bh0U33IoP4tv6RKx5qjT68TPhxLCAROuplK4Zslu9prcU25MxpTmjkf9irALv7ykdBl9LmhLq58S00G10aIRGA');
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const express = require('express');
 const cors = require('cors');
 const app = express();
@@ -37,4 +37,5 @@ app.post('/create-checkout-session', async (req, res) => {
   }
 });
 
-app.listen(4242, () => console.log('Stripe server running on port 4242'));
+const PORT = process.env.PORT || 4242;
+app.listen(PORT, () => console.log(`Stripe server running on port ${PORT}`));
