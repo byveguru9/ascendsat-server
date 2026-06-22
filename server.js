@@ -1,4 +1,4 @@
-const stripe = require('stripe')('pk_live_51TkqMYBp80o2Bh0U2j4ZSZqGHGIydUl9m9klLHEnpGPYhyyC6k3m8iNAN4K715iPvdA16M0NdgJSFV1vxyby8P0A00FlhjwxBL');
+const stripe = require('stripe')('sk_test_51TkqMYBp80o2Bh0U33IoP4tv6RKx5qjT68TPhxLCAROuplK4Zslu9prcU25MxpTmjkf9irALv7ykdBl9LmhLq58S00G10aIRGA');
 const express = require('express');
 const cors = require('cors');
 const app = express();
